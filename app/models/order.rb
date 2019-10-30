@@ -17,8 +17,9 @@ class Order < ApplicationRecord
         result = orders_starting_inside_interval + orders_ending_inside_interval + orders_overlapping_interval
 
         if room_type
+            room_type_id = RoomType.type_by_name(room_type)
             result = result.select do |order|
-                order[:room_type] == room_type # TODO CONVERT NAME OF ROOM TO NUMBER
+                order[:room_type] == room_type_id
             end
         end
 
@@ -35,9 +36,9 @@ class Order < ApplicationRecord
 
         # then, create the order
         self.create(location_id: location_id,
-            start_date: start_date, 
+            start_date: start_date,
             end_date: end_date, 
-            room_type: room_type,
+            room_type: RoomType.type_by_name(room_type),
             user_id: user.id)
     end
     

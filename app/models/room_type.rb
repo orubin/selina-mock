@@ -17,4 +17,9 @@ class RoomType < ApplicationRecord
         return 'DELUXE_ROOM' if room_type == 2
     end
 
+    def self.type_by_name(name)
+        return 0 if name == 'DORM'
+        return 1 if name == 'PRIVATE_ROOM'
+        return 2 if name == 'DELUXE_ROOM'
+    end
 end
