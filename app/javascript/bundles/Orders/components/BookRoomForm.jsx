@@ -42,8 +42,6 @@ export default class BookRoomForm extends React.Component {
         };
         
         axios.post('/api/v1/book_room', data, config).then((response) => {
-          console.log(response);
-          console.log(response.data.message);
           this.setState({message: response.data.message});
         });
     }
