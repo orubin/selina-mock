@@ -3,7 +3,6 @@ Rails.application.routes.draw do
   root to: 'locations#index'
 
   get 'order/:id', to: 'orders#index'
-  resources :orders, only: :index
 
   namespace :api do
     namespace :v1, defaults: { format: 'json' } do
