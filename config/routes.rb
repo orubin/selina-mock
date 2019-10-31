@@ -7,7 +7,6 @@ Rails.application.routes.draw do
 
   namespace :api do
     namespace :v1, defaults: { format: 'json' } do
-      post 'orders', to: 'orders#index'
       post 'check_rooms', to: 'orders#check_rooms'
       post 'book_room', to: 'orders#book_room'
       # resources :orders, only: :index

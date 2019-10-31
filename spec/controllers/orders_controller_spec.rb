@@ -1,7 +1,6 @@
+require 'spec_helper'
 require 'rails_helper'
 
-RSpec.describe OrdersController, type: :controller do
-    describe "GET #index" do
-        
-    end
+RSpec.describe OrdersController, type: :request do
+    
 end

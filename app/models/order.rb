@@ -15,7 +15,7 @@ class Order < ApplicationRecord
         orders_overlapping_interval = where('start_date < ? AND end_date > ? AND location_id = ? AND status = 1', start_date, end_date, location_id)
 
         result = orders_starting_inside_interval + orders_ending_inside_interval + orders_overlapping_interval
-
+        
         if room_type
             room_type_id = RoomType.type_by_name(room_type)
             result = result.select do |order|

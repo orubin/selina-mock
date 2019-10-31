@@ -2,6 +2,11 @@
 
 Selina mock
 
+Rails version             6.0.0
+Ruby version              ruby 2.6.5p114 (2019-10-01 revision 67812) [x86_64-darwin18]
+
+Installation:
+
 bundle install
 
 If mysql2 is giving you a hard time, try and:
@@ -12,3 +17,8 @@ After bundle install is completed, run:
 
 rails db:migrate db:seed
 rails s
+
+
+
+Tests:
+rspec
