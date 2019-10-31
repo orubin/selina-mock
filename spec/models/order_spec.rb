@@ -107,7 +107,7 @@ RSpec.describe Order, type: :model do
       expect(result.size).to eq(0)
     end
 
-    it "checks for good response when room type is matching" do
+    it "checks for response when room type is matching" do
       location = Location.create(name: 'Test Location')
       user = User.create(name: 'Test User')
       order = Order.create(location_id: location.id, 
