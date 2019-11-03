@@ -4,6 +4,10 @@
     align-content: center;
 }
 
+.form-group {
+    margin: 20px;
+}
+
 .pin {
     position: absolute;
     top: 40%;

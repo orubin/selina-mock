@@ -16,13 +16,13 @@ const RoomType = (props) => {
     return (
       <div>
         <div className="form-group">
-          <label htmlFor="name">Type</label>
+          <label htmlFor="type">Type:</label>
           <select id={"type"+props.index}>
             <option key="DORM">DORM</option>
             <option key="PRIVATE">PRIVATE</option>
             <option key="DELUXE">DELUXE</option>
           </select>
-          <label htmlFor="name">Price</label>
+          <label htmlFor="price">Price:</label>
           <input className="form-control" type="text" id={"price"+props.index} required/>
         </div>
       </div>
