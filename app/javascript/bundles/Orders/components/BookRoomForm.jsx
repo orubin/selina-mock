@@ -21,7 +21,7 @@ export default class BookRoomForm extends React.Component {
     submitForm = (e) => {
         e.preventDefault();
         
-        const data = { 
+        const data = {
             name: e.target.name.value,
             address: e.target.address.value,
             phone: e.target.phone.value,
