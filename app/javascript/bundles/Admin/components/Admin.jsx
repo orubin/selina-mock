@@ -6,6 +6,9 @@ import './Admin.css';
 
 Geocoder.init('AIzaSyDxCfoKfjZjLCMX2gPTs2D8NfE1uGNXBac');
 
+const ROOMPRICE = 120;
+const ROOMNAME = 'DORM';
+
 const Marker = (props) => {
     return (
       <button className="pin"/>
@@ -17,13 +20,13 @@ const RoomType = (props) => {
       <div>
         <div className="form-group">
           <label htmlFor="type">Type:</label>
-          <select id={"type"+props.index}>
+          <select id={`type${props.index}`}>
             <option key="DORM">DORM</option>
             <option key="PRIVATE">PRIVATE</option>
             <option key="DELUXE">DELUXE</option>
           </select>
           <label htmlFor="price">Price:</label>
-          <input className="form-control" type="text" id={"price"+props.index} required/>
+          <input className="form-control" type="text" id={`price${props.index}`} required/>
         </div>
       </div>
     );
@@ -41,7 +44,7 @@ export default class Admin extends React.Component {
         center: this.props.center,
         marker: {lat: 0.0, lng: 0.0},
         country: '',
-        rooms: [{type: 'DORM', price: 120}]
+        rooms: [{type: ROOMNAME, price: ROOMPRICE}]
       };
       this.locations = this.props.locations.map((item, key) =>
         <p key={item.name}>{item.name}</p>

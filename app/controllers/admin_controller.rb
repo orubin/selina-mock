@@ -2,6 +2,9 @@
 
 class AdminController < ApplicationController
     layout "admin"
+
+    LATITUDE = 9.0817275
+    LONGITUDE = -79.5932217
   
     def index
       locations = Location.all
@@ -13,7 +16,7 @@ class AdminController < ApplicationController
         locations: locations_array,
         zoom: 6,
         center: {
-          lat: 9.0817275, lng: -79.5932217
+          lat: LATITUDE, lng: LONGITUDE
         }
       }
     end
