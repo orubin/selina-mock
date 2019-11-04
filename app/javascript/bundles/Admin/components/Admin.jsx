@@ -44,6 +44,7 @@ export default class Admin extends React.Component {
         center: this.props.center,
         marker: {lat: 0.0, lng: 0.0},
         country: '',
+        message: '',
         rooms: [{type: ROOMNAME, price: ROOMPRICE}]
       };
       this.locations = this.props.locations.map((item, key) =>
@@ -88,7 +89,11 @@ export default class Admin extends React.Component {
       let rooms = [];
 
       for (var i = 0; i < this.state.rooms.length; i++) {
-        rooms.push({type: e.target["type"+i].value, price: e.target["price"+i].value});
+        rooms.push({
+          type: e.target["type"+i].value,
+          price: e.target["price"+i].value,
+          guests_amount: 0
+        });
       }
 
       data.rooms = rooms;
@@ -143,6 +148,7 @@ export default class Admin extends React.Component {
             </form>
 
             <br/>
+            <h2>{this.state.message}</h2>
             <div style={{ height: '100vh', width: '80%', margin: 'auto'}}>
               <GoogleMapReact
                 bootstrapURLKeys={{ key: 'AIzaSyDxCfoKfjZjLCMX2gPTs2D8NfE1uGNXBac' }}

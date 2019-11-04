@@ -9,9 +9,9 @@ class Api::V1::LocationsController < Api::V1::BaseController
                 location_id: location.id,
                 room_type: room[:type],
                 price_per_night: room[:price],
-                guests_amount: 0) # room.guests_amount)
+                guests_amount: room[:guests_amount])
         end
-        render json: { success: true, data: {} }
+        render json: { success: true, data: { message: 'Location added successfully' } }
     end
 
     private
@@ -29,7 +29,7 @@ class Api::V1::LocationsController < Api::V1::BaseController
         @country = params[:country]
         @lat = params[:lat]
         @lng = params[:lng]
-        @rooms = params[:rooms]
+        @rooms = params[:rooms] || []
     end
 
 end
