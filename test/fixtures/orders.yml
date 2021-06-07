@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  location_id: 1
+  room_type: 1
+  guests_amount: 1
+  user_id: 1
+  status: MyString
+  start_date: 2019-10-30 11:57:41
+  end_date: 2019-10-30 11:57:41
+
+two:
+  location_id: 1
+  room_type: 1
+  guests_amount: 1
+  user_id: 1
+  status: MyString
+  start_date: 2019-10-30 11:57:41
+  end_date: 2019-10-30 11:57:41

@@ -1,24 +1,24 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Selina mock
 
-Things you may want to cover:
+Rails version             6.0.0
+Ruby version              ruby 2.6.5p114 (2019-10-01 revision 67812) [x86_64-darwin18]
 
-* Ruby version
+Installation:
 
-* System dependencies
+bundle install
 
-* Configuration
+If mysql2 is giving you a hard time, try and:
 
-* Database creation
+`gem install mysql2 -v '0.5.2' -- --with-cflags=\"-I/usr/local/opt/openssl/include\" --with-ldflags=\"-L/usr/local/opt/openssl/lib\"`
 
-* Database initialization
+After bundle install is completed, run:
 
-* How to run the test suite
+`rails db:migrate db:seed`
 
-* Services (job queues, cache servers, search engines, etc.)
+`rails s`
 
-* Deployment instructions
 
-* ...
+Tests:
+rspec

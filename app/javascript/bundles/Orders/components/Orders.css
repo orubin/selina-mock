@@ -1,0 +1,21 @@
+.container {
+    margin: auto;
+    text-align: center;
+    align-content: center;
+}
+
+.datePicker {
+    margin: 10px;
+}
+
+.roomtable {
+    margin: auto;
+    margin-top: 10px;
+    text-align: center;
+    border: 1px solid;
+}
+
+.tableCell {
+    margin: 20px;
+    padding: 10px;
+}
